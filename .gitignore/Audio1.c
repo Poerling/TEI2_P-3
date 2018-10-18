@@ -1,4 +1,6 @@
+#define _CRT_SECURE_NO_DEPRECATE
 #include <stdio.h>
+#include <stdlib.h>
 #include "wave.h"
 
 typedef struct wavheader {
@@ -19,7 +21,12 @@ typedef struct wavheader {
 
 void main() 
 {
+	FILE * datei;
 
+	/* Funktioniert noch nicht, Kann Datei nicht öffnen ---- WARUM? */
+	datei = fopen("test.wav", "r");
+	if (NULL == datei) {
+		printf("Kann Datei nicht öffnen\n");
 
-
+	}
 }
